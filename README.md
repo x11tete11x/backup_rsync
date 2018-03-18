@@ -1,5 +1,5 @@
 # backup_rsync
-A customizable script that can be executed periodically but only will create a new backup when changes something changes
+A customizable script that can be executed periodically but only will create a new backup when something changes
 
 How it works?
 For example this configuration:
