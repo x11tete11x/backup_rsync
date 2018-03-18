@@ -1,14 +1,17 @@
 #!/bin/bash
+########## CONFIG #################
 TARGET="backup_etc"
+BACKUPDIR="/backup/archivo/"
+SRC_RSYNC="/etc/"
+DST_RSYNC="/backup/$TARGET/etc"
+###################################
+
 DIA=`date +%d`
 MES=`date +%m`
 ANIO=`date +%Y`
 HORA=`date +%H%M%S`
 TIMESTAMP="$ANIO$MES$DIA""_""$HORA"
 HOSTNAME="$(hostname)"
-BACKUPDIR="/backup/archivo/"
-SRC_RSYNC="/etc/"
-DST_RSYNC="/backup/$TARGET/etc"
 
 #Creamos directorios si no existen
 mkdir -p "$DST_RSYNC"

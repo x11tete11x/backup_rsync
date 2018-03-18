@@ -1,14 +1,17 @@
 #!/bin/bash
+################ CONFIG ####################
 TARGET="backup_log"
+BACKUPDIR="/backup/archivo/"
+SRC_RSYNC="/var/log/"
+DST_RSYNC="/backup/$TARGET/log"
+############################################
+
 DIA=`date +%d`
 MES=`date +%m`
 ANIO=`date +%Y`
 HORA=`date +%H%M%S`
 TIMESTAMP="$ANIO$MES$DIA""_""$HORA"
 HOSTNAME="$(hostname)"
-BACKUPDIR="/backup/archivo/"
-SRC_RSYNC="/var/log/"
-DST_RSYNC="/backup/$TARGET/log"
 
 #Creamos directorios si no existen
 mkdir -p "$DST_RSYNC"
